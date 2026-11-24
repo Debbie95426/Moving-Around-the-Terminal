@@ -2,6 +2,7 @@
 #define ROOM_H
 
 class Player;
+class Item;
 
 class Room {
 private:
@@ -13,6 +14,8 @@ public:
 
     bool isWall(int x, int y) const;
     void draw(const Player& player) const;
+    void placeItem(Item* item);
+    char takeItem(int x, int y);
 };
 
 #endif
